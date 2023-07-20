@@ -1,0 +1,67 @@
+<div class="boxL">
+  {{!-- <form action="/students/search?{{filtro}}&{{searchQuery}}" method="post" class="mx-10 p-3 flex">
+    <input type="text" class="border border-gray-200 rounded-md bg-white-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" placeholder="Buscar estudiante" name="searchQuery">
+    <select class="border border-gray-200 rounded-md bg-white-200 w-1/2 text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" name="filtro" id="cars">
+      <option value="Id">ID</option>
+      <option value="name">NOMBRE</option>
+      <option value="lastname">APELLIDO</option>
+      <option value="classroom">GRADO</option>
+    </select>
+
+    <button class="rounded-md bg-green-500 w-1/4 text-lg text-white font-semibold p-2 my-3
+      hover:bg-green-600 focus:bg-green-700 " type="submit">Buscar</button>
+  </form> --}}
+
+  <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg mt-12">
+
+    <table class="table-fixed w-full">
+      <thead class="text-xs">
+        <tr class="text-white" style="background-color: #1a1a1a;">
+          <th class="w-22 py-4 text-center">CODIGO</th>
+          <th class="w-1/6 py-4 text-center">PRODUCTO</th>
+          <th class="w-1/6 py-4 text-center">CATEGORIA</th>
+          <th class="w-20 py-4 text-center">PRECIO</th>
+          <th class="w-20 py-4 text-center">STOCK</th>
+          <th class="w-1/6 py-4 text-center">DESCRIPCION</th>
+          <th class="w-22 py-4 text-center">Vendido</th>
+          <th class="w-28 py-4 text-center">TOOLS</th>
+        </tr>
+      </thead>
+      <tbody class="text-xs">
+        {{#each products}}
+        <tr>
+          <td class="py-3 px-6 text-center">{{codigoProducto}}</td>
+          <td class="p-3 text-center">{{espacioNombre nombre}}</td>
+          <td class="p-3 text-center">{{espacioNombre categoria}}</td>
+          <td class="p-3 text-center">{{moneda precio}}</td>
+          <td class="p-3 text-center">{{cantidad}}</td>
+          <td class="p-3 text-center">{{descripcion}}</td>
+          <td class="p-3 text-center">{{fechaVenta}}</td>
+
+          <td class="p-3 flex">
+            <form action="/deleteProduct" method="POST" class="mx-2">
+              <input type="hidden" value="{{id}}" name="id">
+              <button class="bg-red-500 text-white px-3 py-1 rounded-sm" type="submit">
+                <i class="fas fa-trash"></i></button>
+            </form>
+            <a href="/editProduct{{id}}" class="bg-green-500 text-white px-3 py-1 rounded-sm h-6">
+              <i class="fas fa-pen"></i>
+            </a>
+            {{!-- <form action="/assistanceCreate" method="POST" class="mx-2">
+              <input type="hidden" value="{{Id}}" name="id">
+              <input type="hidden" value="{{name}}" name="name">
+              <input type="hidden" value="{{lastname}}" name="lastname">
+              <input type="hidden" value="{{classroom}}" name="classroom">
+              <button class="bg-gray-500 text-white px-3 py-1 rounded-sm" type="submit">
+                <i class="fas fa-calendar-day"></i>
+              </button>
+            </form> --}}
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,114 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Stocker</title>
+
+  <!-- Tailwind CSS Link -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css" />
+
+  <!-- Fontawesome Link -->
+  <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/w3-css/4.1.0/w3.css"
+    integrity="sha512-Ef5r/bdKQ7JAmVBbTgivSgg3RM+SLRjwU0cAgySwTSv4+jYcVeDukMp+9lZGWT78T4vCUxgT3g+E8t7uabwRuw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/w3-css/4.1.0/w3.min.css"
+    integrity="sha512-Z6UIAdEZ7JNzeX5M/c5QZj+oqbldGD+E8xJEoOwAx5e0phH7kdjsWULGeK5l2UjehKtChHDaUY2rQAF/NEiI9w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+
+<body>
+  <aside class="h-screen text-white">
+    <div id="logo" class="flex my-8">
+      <a href="/" class="mx-6">
+        <span>
+          <img class="rounded-full w-14 h-14" src="../../docs/Logo.jpeg" alt="LOGO" />
+        </span>
+      </a>
+      <h1 class="text-lg md:text-2xl font-bold text-white">The <span style="color: 
+#F88929">Stocker</span></h1>
+    </div>
+
+    <div id="nav" class="w-full px-6">
+      <a href="/viewProducts"
+        class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 transition ease-linear duration-150">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z">
+            </path>
+          </svg>
+
+        </div>
+        <div class="flex flex-col">
+          <span class="text-lg font-bold leading-5 text-white">Ver Productos</span>
+          <span class="text-sm text-white/50 hidden md:block">Listar datos</span>
+        </div>
+      </a>
+      <a href="/addProducts"
+        class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 transition ease-linear duration-150">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-7 h-7" class="bi bi-box-seam" fill="currentColor">
+            <path
+              d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"
+              id="mainIconPathAttribute" fill="#ffffff" stroke-width="0" stroke="#ff0000"></path>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-lg text-slate-300 font-bold leading-5">Agregar
+            Produto</span>
+          <span class="text-sm text-slate-500 hidden md:block">Insertar a
+            Database</span>
+        </div>
+      </a>
+      <a href="/viewTickets"
+        class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 transition ease-linear duration-150">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0"
+            stroke="currentColor" class="w-6 h-6" fill="currentColor" class="bi bi-ticket">
+            <path
+              d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5ZM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5h-13Z"
+              id="mainIconPathAttribute" fill="#ffffff">
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-lg text-slate-300 font-bold leading-5">Buscar Ventas</span>
+          <span class="text-sm text-slate-500 hidden md:block">Ver productos vendidos</span>
+        </div>
+      </a>
+      
+    </div>
+  </aside>
+  <section class="h-screen">
+    {{{body}}}
+  </section>
+  {{! <nav class="flex py-5 bg-yellow-500 text-white px-24">
+    <div class="w-1/2 px-12 mr-auto">
+      <p class="text-2xl font-bold">App Cafe</p>
+    </div>
+
+    <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
+      <li class="nav-item px-4">
+        <a href="/viewProducts" class="nav-link font-semibold hover:bg-yellow-700 py-3 px-4 rounded-md">Ver
+          productos</a>
+      </li>
+
+      <li class="nav-item px-4">
+        <a href="/addProducts" class="nav-link font-semibold border-2 border-white hover:text-yellow-700 
+            hover:bg-white py-3 px-4 rounded-md">Agregar producto</a>
+      </li>
+    </ul>
+  </nav> }}
+  <!-- Document body -->
+
+</body>
+
+</html>

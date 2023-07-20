@@ -1,0 +1,79 @@
+<div
+  class="block mx-auto my-12 p-8 text-white" style="background-color: #1A1A1A; border-radius:10px;"
+>
+
+  <h1 class="text-center text-3xl font-bold">Editar Producto</h1>
+  {{#each products}}
+    <form action="" method="POST" class="mt-4">
+
+      <div class="flex space-x-2">
+
+        <input
+          type="text"
+          class="bg-gray-700 w-full text-lg placeholder-white-500 p-2 my-2"
+          placeholder="Nombre producto"
+          name="nombre"
+          value={{nombre}}
+          required
+        />
+
+        <input
+          type="text"
+          name="categoria"
+          id="category"
+          placeholder="Categoria"
+          class="bg-gray-700 w-full text-lg placeholder-white-500 p-2 my-2"
+          value={{categoria}}
+          required
+          disabled
+        />
+
+      </div>
+
+      <div class="flex space-x-2">
+        <input
+          type="number"
+          class="bg-gray-700 w-full text-lg placeholder-white-500 p-2 my-2"
+          placeholder="Precio de Venta"
+          name="precio"
+          value={{precio}}
+          required
+        />
+
+        <input
+          type="number"
+          class="bg-gray-700 w-full text-lg placeholder-white-500 p-2 my-2"
+          placeholder="Stock"
+          name="cantidad"
+          value={{cantidad}}
+          required
+        />
+      
+<div class="relative z-0 mb-6 w-full group">
+			<input type="date" name="fechaCompra" class="block bg-gray-700 w-full text-lg placeholder-white-500 p-2 my-2" value={{fechaCompra}} required />
+			<label for="floating_fc" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Fecha Compra</label>
+		</div>
+     <div class="relative z-0 mb-6 w-full group">
+			<input type="date" name="fechaVencimiento" class="block bg-gray-700 w-full text-lg placeholder-white-500 p-2 my-2" value={{fechaVencimiento}} required />
+			<label for="floating_fc" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Fecha Vecimiento</label>
+		</div>
+    <div class="relative z-0 mb-6 w-full group">
+			<input type="date" name="fechaVenta" class="block bg-gray-700 w-full text-lg placeholder-white-500 p-2 my-2" value={{fechaVenta}} required />
+			<label for="floating_fc" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Fecha Venta</label>
+		</div>
+    </div>
+      <textarea
+        class="bg-gray-700 w-full text-lg placeholder-white-500 p-2 my-2"
+        placeholder="Descripcion del producto"
+        name="descripcion"
+        required
+      >{{descripcion}}</textarea>
+
+      <button
+        type="submit"
+        class="rounded-md bg-blue-500 w-full text-lg text-white font-semibold p-2 my-3 hover:bg-blue-600 focus:bg-blue-700"
+      >Guardar producto</button>
+
+    </form>
+  {{/each}}
+</div>

@@ -1,0 +1,33 @@
+body {
+  background-color: #f88929;
+}
+aside {
+  font-family: "Inter", sans-serif;
+  position: sticky;
+  width: 20%;
+  float: left;
+  position: fixed;
+  background-color: #1a1a1a;
+}
+section {
+  width: 80%;
+  margin: auto;
+  float: right;
+  padding: 20px;
+}
+.boxL {
+  margin-top: 10px;
+}
+#nav a:hover {
+  background-color: #f88929;
+}
+form input, select, textarea{
+  border: none;
+  border-bottom: 2px solid #f88929;
+  outline: none;
+}
+#form_S_T button:hover{
+  background-color: #f88929;
+  transition: linear .1s;
+}
+              
